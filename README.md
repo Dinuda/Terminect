@@ -5,10 +5,11 @@ This is a file transfer system that can be used from two machines connected to t
 
 ## How to use it?
 
+** Put the file thayou need to send in the `sender` folder. And name the file `send.pdf` **
+
 Just run
 `node sender.js` on the sending computer. Then run `node receiver.js` [IP_ADDRESS] on the receiving computer where [IP_ADDRESS] is the IP address of the sending computer. Don’t forget to make sure that port 8000 is not in use.
 
-- Put the file that needs to be sent in the sender folder.
 - The received file will be in the receiver folder. (check reciever.txt for more info)
 
 **NOTICE: Terminect is currently in beta, but completely functional. U may test it on the same local machine(open two cmd's)**
