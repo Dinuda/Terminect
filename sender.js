@@ -1,4 +1,6 @@
-const net = require("net"), fs = require("fs");
+// Packages
+const net = require("net")
+const fs = require("fs");
 
 let server, istream = fs.createReadStream("./sender/SC-02.pdf");
 
@@ -18,4 +20,5 @@ server = net.createServer(socket => {
     })
 })
 
+// Output server [PORT]
 server.listen(8000, '0.0.0.0');
