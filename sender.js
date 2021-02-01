@@ -2,7 +2,7 @@
 const net = require("net")
 const fs = require("fs");
 
-let server, istream = fs.createReadStream("./sender/SC-02.pdf");
+let server, istream = fs.createReadStream("./sender/send.pdf");
 
 server = net.createServer(socket => {
     socket.pipe(process.stdout);
