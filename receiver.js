@@ -1,9 +1,12 @@
+// Packages
 const net = require("net"), fs = require("fs"), remote_server = process.argv[2];
 let socket;
 
+// Define connection parameters
 socket = remote_server ? net.connect(8000, remote_server) : net.connect(8000);
 
-let ostream = fs.createWriteStream("./receiver/SC-02.pdf");
+// Check for a file name with send.pdf
+let ostream = fs.createWriteStream("./receiver/send.pdf");
 let date = new Date(), size = 0, elapsed;
 socket.on('data', chunk => {
     size += chunk.length;
